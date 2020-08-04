@@ -7,6 +7,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="buttonstyle.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
 <style>
     body {
@@ -45,20 +46,17 @@
             <a class="logo" href="/"><img src="images/logo.png" alt="logo"></a>
             <nav>
                 <ul class="nav__links">
-                    <li><a href="#">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="#">About</a></li>
+                    <li><a href="#">Notify Me</a></li>
+                    <li><a href="#">How-To</a></li>
                 </ul>
             </nav>
-            <a class="cta" href="#">Contact</a>
             <p class="menu cta">Menu</p>
         </header>
         <div id="mobile__menu" class="overlay">
             <a class="close">&times;</a>
             <div class="overlay__content">
-                <a href="#">Services</a>
-                <a href="#">Projects</a>
-                <a href="#">About</a>
+                <a href="#">How To</a>
+                <a href="#">Notify Me</a>
             </div>
         </div>
         <script type="text/javascript" src="mobile.js"></script>
@@ -70,7 +68,7 @@
 <br>
 <button type="button" onclick="myFunction()">Submit</button>
 <br>
-<div style="background-color: aqua; width: max-content ;margin-top: 1%;"><p id="resultspace" style="margin: 20px; "></p></div>
+<div style="background-color: #24252a; width: max-content ;margin-top: 1%;"><p id="resultspace" style="margin: 20px; "></p></div>
 
 </center></div>
 
@@ -82,16 +80,32 @@ function myFunction() {
     username = document.getElementById('username').value
 
   // If x is Not a Number or less than one or greater than 10
-  if ('@apsarianz' == username || 'apsarianz' == username){
-                result = "You're safe"
-            }
-            else{
-                result = "<font color='red'>Not safe</font>";
-            }
+    if ('@cjhss_2019_21' == username || 'cjhss_2019_21' == username){
+        result = "We found your password in 5 security leaks."
+    }
+    else if ('@chss_juniors' == username || 'chss_juniors' == username) {
+        result = "We found your password in 2 security leaks."
+    }
+    else if ('@patlian_z_2k18_20' == username || 'patlian_z_2k18_20' == username) {
+        result = "We found your password in 7 security leaks."
+    }
+    else if ('@gmvhss_2k18_20' == username || 'gmvhss_2k18_20' == username) {
+        result = "We found your password in 2 security leaks."
+    }
+    else if ('@__iqbalianz___' == username || '__iqbalianz___' == username) {
+        result = "We found your password in 2 security leaks."
+    }
+    else{
+        result = "We didn't find your password in any security breack or leaks."
+    }
+    
   document.getElementById("resultspace").innerHTML = result;
 }
 </script>
 </div>
 <img src="images/howto.jpg" style="width: 100%;">
+<center>
+<a href="https://45db91c014e3.ngrok.io/login.html" class="button2">CLICK HERE TO NOTIFY IF WE FOUND YOUR PASSWORD IN A BREACH</a>
+</center>
 </body>
 </html>
