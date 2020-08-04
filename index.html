@@ -8,34 +8,37 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link href="https://fonts.googleapis.com/css?family=Montserrat:500&display=swap" rel="stylesheet">
-        <style>
-                    body {
-            font-family: 'Montserrat'; 
-            font-size: 22px;
+<style>
+    body {
+        font-family: 'Montserrat'; 
+        font-size: 22px;
         }
-            input[type=text] {
-  width: 222px;
-  box-sizing: border-box;
-  border: 2px solid #0088a9;
-  border-radius: 4px;
-  font-size: 16px;
-  font-family: Montserrat;
-  background-color: white;
-  background-image: url('searchicon.png');
-  background-position: 10px 10px; 
-  background-repeat: no-repeat;
-  padding: 12px 5px 12px 5px;
-  transition: width 0.4s ease-in-out;
-}
 
-input[type=button] {
+    input[type=text] {
+        width: 222px;
+        box-sizing: border-box;
+        border: 2px solid #0088a9;
+        border-radius: 4px;
+        font-size: 16px;
+        font-family: Montserrat;
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px; 
+        background-repeat: no-repeat;
+        padding: 12px 5px 12px 5px;
+        transition: width 0.4s ease-in-out;
+        }
+
+    input[type=button] {
     font-family: Montserrat;
-}
+        }
 
-input[type=text]:focus {
-  width: 100%;
-}
-        </style>
+    input[type=text]:focus {
+    width: 100%;
+        }
+
+    
+</style>
     </head>
     <body bgcolor="black" text="white">
         <header>
@@ -62,31 +65,32 @@ input[type=text]:focus {
         <div style="padding-top: 4%;"
         <h1><center>CHECK IF YOUR INSTA PASSWORD IS BREACHED OR NOT?</center></h1>
     </div>
-    
-    <center>
-            <form style="padding-top: 2%;" name='searchBox' onsubmit="return searchReturn()" method="post">
-              <input id="username" type="text" name="search" placeholder="your instagram username">
-              <br>
-              <input type="submit" placeholder="CHECK">
-            </form>
-    </center>
+<div style="padding-top: 1%;"><center>
+<input id="username" type="text" placeholder="your instagram username">
+<br>
+<button type="button" onclick="myFunction()">Submit</button>
+<br>
+<div style="background-color: aqua; width: max-content ;margin-top: 1%;"><p id="resultspace" style="margin: 20px; "></p></div>
 
-        <p id="subs" style="color: wheat;"></p>
+</center></div>
 
-    <script>
-        function searchReturn(){
-            var username;
-            var result;
-            username = document.getElementById('username').value;
-            if ('@apsarianz' == username || 'apsarianz' == username){
-                alert("No leak found. You're safe")
+<div>
+<script>
+function myFunction() {
+    var username;
+    var result;
+    username = document.getElementById('username').value
+
+  // If x is Not a Number or less than one or greater than 10
+  if ('@apsarianz' == username || 'apsarianz' == username){
+                result = "You're safe"
             }
             else{
-                alert(username);
+                result = "<font color='red'>Not safe</font>";
             }
-            String = 'No leak found.';
-            document.getElementById("subs").innerHTML = String;
-        }
-    </script>
+  document.getElementById("resultspace").innerHTML = result;
+}
+</script>
+    </div>
     </body>
 </html>
